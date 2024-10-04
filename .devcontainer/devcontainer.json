@@ -1,0 +1,8 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "features": {
+        "ghcr.io/shyim/devcontainers-features/php:latest": {
+            "version": "8.0"
+        }
+    }
+}
