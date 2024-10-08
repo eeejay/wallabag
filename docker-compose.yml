@@ -25,15 +25,18 @@ services:
             # - ../PHPePub:/var/www/html/vendor/wallabag/phpepub
             # - ../guzzle-site-authenticator:/var/www/html/vendor/bdunogier/guzzle-site-authenticator
         env_file:
+            - path: ./docker/php/env
+              required: true # default
+            - path: .env
+              required: true # default
+            - path: .env.local
+              required: false
             # Copy docker/php/env.example to docker/php/env and customize
-            - ./docker/php/env
             # Uncomment the database engine you want, it will use sqlite if both are commented
             # - ./docker/mariadb/env
             # - ./docker/postgres/env
             # Uncomment to enable Xdebug
             # - ./docker/php/xdebug
-            - .env
-            - .env.local
         ports:
             - 8000:8000
             # Uncomment to permit Xdebug remote session
