@@ -84,9 +84,10 @@ services:
         image: blackfire/blackfire:2
         ports: [ "8307" ]
         env_file:
-            - .env
-            - .env.local
-
+            - path: .env
+              required: true # default
+            - path: .env.local
+              required: false
 volumes:
     db-data:
         driver: local
