@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  web-server:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    restart: always
+    volumes:
+      - "../web:/var/www/html/"
+    ports:
+      - "9090:8000"
