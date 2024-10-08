@@ -35,7 +35,6 @@ RUN docker-php-ext-install -j "$(nproc)" \
         sockets \
         tidy \
         zip
-RUN curl -sL https://deb.nodesource.com/setup_14.x | bash \
-    && apt update \
+RUN curl -sL https://deb.nodesource.com/setup_18.x | bash \
     && apt-get -y install nodejs \
     && npm i -g jshint;
