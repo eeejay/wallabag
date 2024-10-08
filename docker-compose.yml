@@ -26,7 +26,7 @@ services:
             # - ../guzzle-site-authenticator:/var/www/html/vendor/bdunogier/guzzle-site-authenticator
         env_file:
             - path: ./docker/php/env
-              required: true # default
+              required: false
             - path: .env
               required: true # default
             - path: .env.local
