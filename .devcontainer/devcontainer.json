@@ -1,18 +1,24 @@
 {
-	"name": "Alpine",
-	"dockerComposeFile": ["docker-compose.yml"],
-	
-	"service": "web-server",
-	"workspaceMount": "source=${localWorkspaceFolder},target=/var/www/html,type=bind,consistency=cached",
-	"workspaceFolder": "/var/www/html",
-	
-	"settings": {
-		"terminal.integrated.shell.linux": "/bin/bash"
+	"image": "mcr.microsoft.com/devcontainers/php:1-8.2-bullseye",
+	// "postStartCommand": "php -S 0.0.0.0:8000",
+	"forwardPorts": [
+		8000
+	],
+	"features": {
+		"ghcr.io/shyim/devcontainers-features/php:latest": {
+			"version": "8.2",
+			"extensionsExtra": "xdebug mbstring"
 	},
-	"extensions": [ 
-		"felixbecker.php-intellisense", "dbaeumer.vscode-eslint", "dbaeumer.jshint", 
-		"hookyqr.beautify","eamodio.gitlens", "eg2.vscode-npm-script", 
-		"msjsdiag.vscode-react-native", "christian-kohler.npm-intellisense", 
-		"ms-vsliveshare.vsliveshare", "vscode.vim"
-	]
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"george-alisson.html-preview-vscode",
+				"bmewburn.vscode-intelephense-client",
+				"xdebug.php-pack",
+				"xdebug.php-debug",
+				"Zignd.html-css-class-completion",
+				"ecmel.vscode-html-css"
+			]
+		}
+	}
 }
