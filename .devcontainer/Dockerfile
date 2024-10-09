@@ -23,7 +23,7 @@ RUN mkdir -p \
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["php", "bin/console", "--env=dev", "server:run", "0.0.0.0:8000"]
 
-FROM rootless AS default
+# FROM rootless AS default
 
 ARG USER_UID=1000
 ARG USER_GID=1000
@@ -37,4 +37,4 @@ RUN groupmod -g 1000 www-data ; \
         /var/www/.cache \
         /var/www/.yarnrc
 
-USER www-data
+# USER www-data
