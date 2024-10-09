@@ -2,8 +2,7 @@
 	"name": "wallabag-container",
 	"build": {
 		// Path is relative to the devcontainer.json file.
-		"dockerfile": "Dockerfile",
-		"context": ".."
+		"dockerfile": "../docker/php/Dockerfile",
 	},
 	"forwardPorts": [
 		8000
