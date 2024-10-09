@@ -1,6 +1,6 @@
 {
 	"image": "mcr.microsoft.com/devcontainers/php:1-8.2-bullseye",
-	// "postStartCommand": "php -S 0.0.0.0:8000",
+	"postStartCommand": "apt-get update && apt-get install -y libmcrypt-dev libicu-dev libpq-dev libxml2-dev libpng-dev libjpeg-dev libwebp-dev libsqlite3-dev imagemagick libmagickwand-dev libtidy-dev libonig-dev libzip-dev libfreetype6-dev zlib1g-dev && docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp && docker-php-ext-install bcmath gd gettext iconv intl mbstring opcache pdo pdo_mysql pdo_pgsql pdo_sqlite sockets tidy zip",
 	"forwardPorts": [
 		8000
 	],
