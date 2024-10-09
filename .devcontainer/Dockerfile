@@ -6,7 +6,7 @@ RUN docker-php-ext-install gd tidy intl sockets
 
 RUN mv "${PHP_INI_DIR}/php.ini-development" "${PHP_INI_DIR}/php.ini"
 
-COPY ../docker/php/entrypoint.sh /entrypoint.sh
-COPY ../docker/php/config/ /opt/wallabag/config/
+COPY "../docker/php/entrypoint.sh" "/entrypoint.sh"
+COPY "../docker/php/config/" "/opt/wallabag/config/"
 
 ENTRYPOINT ["/entrypoint.sh"]
