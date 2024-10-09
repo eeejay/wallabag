@@ -7,7 +7,7 @@
 	"features": {
 		"ghcr.io/shyim/devcontainers-features/php:latest": {
 			"version": "8.2",
-			"extensionsExtra": "xdebug mbstring"
+			"extensionsExtra": "tidy"
 		}
 	},
 	"customizations": {
