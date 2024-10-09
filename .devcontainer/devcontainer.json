@@ -8,6 +8,7 @@
 		"ghcr.io/shyim/devcontainers-features/php:latest": {
 			"version": "8.2",
 			"extensionsExtra": "xdebug mbstring"
+		}
 	},
 	"customizations": {
 		"vscode": {
