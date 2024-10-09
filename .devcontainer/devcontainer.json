@@ -1,5 +1,5 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/php:1-8.2-bullseye",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 	// "postStartCommand": "php -S 0.0.0.0:8000",
 	"forwardPorts": [
 		8000
