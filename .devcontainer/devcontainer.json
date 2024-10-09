@@ -1,15 +1,9 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+	"image": "mcr.microsoft.com/devcontainers/php:1-8.2-bullseye",
 	// "postStartCommand": "php -S 0.0.0.0:8000",
 	"forwardPorts": [
 		8000
 	],
-	"features": {
-		"ghcr.io/shyim/devcontainers-features/php:latest": {
-			"version": "8.2",
-			"extensionsExtra": "tidy"
-		}
-	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
