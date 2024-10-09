@@ -6,6 +6,9 @@ RUN docker-php-ext-install gd tidy intl sockets
 
 RUN mv "${PHP_INI_DIR}/php.ini-development" "${PHP_INI_DIR}/php.ini"
 
+RUN curl -L -o /usr/local/bin/envsubst https://github.com/a8m/envsubst/releases/download/v1.1.0/envsubst-`uname -s`-`uname -m`; \
+    chmod +x /usr/local/bin/envsubst
+
 COPY "../docker/php/entrypoint.sh" "/entrypoint.sh"
 COPY "../docker/php/config/" "/opt/wallabag/config/"
 
